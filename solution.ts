@@ -30,9 +30,41 @@ class Person {
     };
 
     getDetails(): string {
-        return `Name: ${this.name}, Age: ${this.age}`;
+        return ` 'Name: ${this.name}, Age: ${this.age}' `;
     };
 };
+
+
+
+type Item = {
+    title: string;
+    rating: number;
+};
+
+function filterByRating(Items: Item[]): Item[] {
+    return Items.filter(item => item.rating >= 4);
+};
+
+
+
+type User = {
+    id: number;
+    name: string;
+    email: string;
+    isActive: boolean;
+};
+
+function filterActiveUsers(users: User[]): User[] {
+    return users.filter(user => user.isActive === true);
+};
+
+
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
+    isAvailable: boolean
+}
 
 
 

@@ -12,9 +12,14 @@
 
 ### 🟩 উদাহরণ
 
+```ts
 interface User{
     name:string;
     age:number;
 };
 
+type Products{
+    title: string;
+    price:number;
+}
 

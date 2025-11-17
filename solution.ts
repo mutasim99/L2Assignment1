@@ -59,6 +59,7 @@ function filterActiveUsers(users: User[]): User[] {
 };
 
 
+
 interface Book {
     title: string;
     author: string;
@@ -66,12 +67,41 @@ interface Book {
     isAvailable: boolean
 };
 
+
 function printBookDetails(book: Book): void {
     const availability = book.isAvailable ? 'Yes' : 'No'
     console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`);
 };
 
 
+
+
+function getUniqueValues(arr1: (number | string)[], arr2: (number | string)[]): (number | string)[] {
+    const result: (number | string)[] = [];
+
+    function isExists(value: (string | number)): boolean {
+        for (let i = 0; i < result.length; i++) {
+            if (result[i] === value) {
+                return true;
+            };
+        };
+        return false;
+    };
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (!isExists(arr1[i])) {
+            result.push(arr1[i]);
+        };
+    };
+
+    for (let i = 0; i < arr2.length; i++) {
+        if (!isExists(arr2[i])) {
+            result.push(arr2[i]);
+        };
+    };
+
+    return result;
+};
 
 
 

@@ -18,7 +18,7 @@ interface User{
     age:number;
 };
 
-type Products{
+type Products={
     title: string;
     price:number;
 }

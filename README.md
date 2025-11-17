@@ -30,6 +30,7 @@ type Products={
 
 ### 🟩 উদাহরণ
 
+```ts
 type User = {
     name: string;
     email: string;
@@ -38,3 +39,4 @@ type User = {
 
 type UserKeys = keyof User;
 // Output: 'name' | 'email' | 'age'
+```

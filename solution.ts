@@ -42,7 +42,7 @@ type Item = {
 };
 
 function filterByRating(Items: Item[]): Item[] {
-    return Items.filter(item => item.rating >= 4);
+    return Items.filter(item => item.rating >= 4 && item.rating <=5);
 };
 
 
